@@ -55,10 +55,14 @@ if(NOT corrade_POPULATED)
   message(STATUS "Fetching CORRADE v${CORRADE_VERSION}")
 
   FetchContent_Populate(corrade)
+  set(WITH_INTERCONNECT TRUE CACHE BOOL "" FORCE)
+  set(WITH_PLUGINMANAGER  TRUE CACHE BOOL "" FORCE)
+  set(WITH_UTILITY   TRUE CACHE BOOL "" FORCE)
+  set(WITH_RC    TRUE CACHE BOOL "" FORCE)
 
   set(BUILD_MULTITHREADED TRUE CACHE BOOL "" FORCE)
   set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CORRADE_SOURCE_DIR}/modules)
-  add_subdirectory(${corrade_SOURCE_DIR} ${corrade_BINARY_DIR})
+  add_subdirectory(${corrade_SOURCE_DIR})# ${corrade_BINARY_DIR})
   # configure_file(${corrade_BINARY_DIR}/src/Corrade/configure.h ${corrade_SOURCE_DIR}/src/Corrade/configure.h COPYONLY)
   # we copy the configure.h from build to source 
 
