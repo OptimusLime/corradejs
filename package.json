@@ -1,0 +1,30 @@
+{
+  "name": "corradejs",
+  "version": "1.0.0",
+  "description": "CMake-js wrapper to build Corrade C++ graphics lib",
+  "main": "lib/index.js",
+  "scripts": {
+    "install": "cross-var cmake-js compile -CG 'Visual Studio 16 2019' --CDCMAKE_TOOLCHAIN_FILE=$VCTOOL --CDVCPKG_TARGET_TRIPLET=x64-windows",
+    "compile": "cross-var cmake-js compile -CG 'Visual Studio 16 2019' --CDCMAKE_TOOLCHAIN_FILE=$VCTOOL --CDVCPKG_TARGET_TRIPLET=x64-windows",
+    "build": "cross-var cmake-js build -CG 'Visual Studio 16 2019' --CDCMAKE_TOOLCHAIN_FILE=$VCTOOL --CDVCPKG_ROOT=$VCPKG_DIR --CDVCPKG_TARGET_TRIPLET=x64-windows",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "bindings": "~1.2.1",
+    "cross-var": "^1.1.0",
+    "node-addon-api": "^3.2.1"
+  },
+  "devDependencies": {
+    "cmake-js": "^6.2.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OptimusLime/corradejs.git"
+  },
+  "author": "Paul Szerlip",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/OptimusLime/corradejs/issues"
+  },
+  "homepage": "https://github.com/OptimusLime/corradejs#readme"
+}
