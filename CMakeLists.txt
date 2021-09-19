@@ -58,9 +58,8 @@ if(NOT corrade_POPULATED)
 
   set(BUILD_MULTITHREADED TRUE CACHE BOOL "" FORCE)
   set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CORRADE_SOURCE_DIR}/modules)
-  add_subdirectory(${corrade_SOURCE_DIR} ${corrade_BINARY_DIR})
-
-  configure_file(${corrade_BINARY_DIR}/src/Corrade/configure.h ${corrade_SOURCE_DIR}/src/Corrade/configure.h COPYONLY)
+  add_subdirectory(${corrade_SOURCE_DIR})# ${corrade_BINARY_DIR})
+  # configure_file(${corrade_BINARY_DIR}/src/Corrade/configure.h ${corrade_SOURCE_DIR}/src/Corrade/configure.h COPYONLY)
   # we copy the configure.h from build to source 
 
   set(CORRADE_INCLUDE_DIR 
