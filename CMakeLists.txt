@@ -43,6 +43,7 @@ endif()
 
 add_library(${PROJECT_NAME} SHARED) 
 set_target_properties(${PROJECT_NAME} PROPERTIES PREFIX "" SUFFIX ".node")
+set(CMAKE_INSTALL_PREFIX ${CMAKE_SOURCE_DIR}/bin)
 
 FetchContent_Declare(
   corrade
