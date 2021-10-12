@@ -83,7 +83,7 @@ target_compile_definitions(
     )
 
 file(GLOB SRC_MAIN
-    "src/lib/*.cpp")
+    "src/*.cpp")
 
 target_sources(${PROJECT_NAME} PRIVATE
     ${SRC_MAIN}
